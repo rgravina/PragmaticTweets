@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -23,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ail-wf-NyG">
-                                <rect key="frame" x="260" y="49" width="80" height="30"/>
+                                <rect key="frame" x="260" y="87" width="80" height="30"/>
                                 <state key="normal" title="Send Tweet">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -31,21 +32,66 @@
                                     <action selector="handleTweetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XLH-qc-wX8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOX-Qd-nhG">
+                                <rect key="frame" x="242" y="49" width="116" height="30"/>
+                                <state key="normal" title="Show My Tweets">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleShowMyTweetsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IS4-FD-x1h"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-RR-lZZ">
+                                <rect key="frame" x="0.0" y="125" width="600" height="475"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="XOX-Qd-nhG" secondAttribute="centerX" id="1Vc-Zz-9ss"/>
+                            <constraint firstItem="PVA-RR-lZZ" firstAttribute="top" secondItem="ail-wf-NyG" secondAttribute="bottom" constant="8" symbolic="YES" id="1pf-1u-0iN"/>
+                            <constraint firstItem="PVA-RR-lZZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4e9-XH-ied"/>
                             <constraint firstItem="ptA-b6-yyM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5bH-DH-Cid"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PVA-RR-lZZ" secondAttribute="trailing" id="67B-MF-f9w"/>
                             <constraint firstItem="ail-wf-NyG" firstAttribute="top" secondItem="ptA-b6-yyM" secondAttribute="bottom" constant="8" symbolic="YES" id="CEC-sK-bFr"/>
                             <constraint firstItem="ail-wf-NyG" firstAttribute="top" secondItem="ptA-b6-yyM" secondAttribute="bottom" constant="8" id="DQt-sb-9fA"/>
+                            <constraint firstItem="PVA-RR-lZZ" firstAttribute="top" secondItem="ail-wf-NyG" secondAttribute="bottom" id="Itv-PB-Xym"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PVA-RR-lZZ" secondAttribute="trailing" id="Lcw-G3-MY7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PVA-RR-lZZ" secondAttribute="bottom" id="Nb4-qt-rKw"/>
+                            <constraint firstItem="ail-wf-NyG" firstAttribute="top" secondItem="XOX-Qd-nhG" secondAttribute="bottom" constant="8" id="PGA-4L-zMg"/>
                             <constraint firstAttribute="centerX" secondItem="ptA-b6-yyM" secondAttribute="centerX" id="Pgk-qb-Uf8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PVA-RR-lZZ" secondAttribute="trailing" constant="-16" id="Sz6-GU-IOd"/>
+                            <constraint firstItem="XOX-Qd-nhG" firstAttribute="top" secondItem="ptA-b6-yyM" secondAttribute="bottom" constant="8" id="ap9-bo-NN4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PVA-RR-lZZ" secondAttribute="trailing" id="cZw-O7-gst"/>
+                            <constraint firstItem="PVA-RR-lZZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="e5L-C5-x5L"/>
                             <constraint firstAttribute="centerX" secondItem="ail-wf-NyG" secondAttribute="centerX" id="hbk-Lu-Tgz"/>
+                            <constraint firstItem="PVA-RR-lZZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jE6-M8-APk"/>
+                            <constraint firstItem="PVA-RR-lZZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mZ7-e9-Uu8"/>
+                            <constraint firstItem="PVA-RR-lZZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qia-3u-Szv"/>
+                            <constraint firstItem="PVA-RR-lZZ" firstAttribute="top" secondItem="ail-wf-NyG" secondAttribute="bottom" constant="8" symbolic="YES" id="rwF-gr-tJX"/>
+                            <constraint firstItem="XOX-Qd-nhG" firstAttribute="top" secondItem="ptA-b6-yyM" secondAttribute="bottom" id="txr-Zj-bdL"/>
+                            <constraint firstItem="PVA-RR-lZZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="yho-b4-Slj"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="4e9-XH-ied"/>
+                                <exclude reference="67B-MF-f9w"/>
+                                <exclude reference="Itv-PB-Xym"/>
+                                <exclude reference="Lcw-G3-MY7"/>
+                                <exclude reference="cZw-O7-gst"/>
+                                <exclude reference="jE6-M8-APk"/>
+                                <exclude reference="mZ7-e9-Uu8"/>
+                                <exclude reference="qia-3u-Szv"/>
+                                <exclude reference="yho-b4-Slj"/>
+                                <exclude reference="txr-Zj-bdL"/>
                                 <exclude reference="CEC-sK-bFr"/>
+                                <exclude reference="DQt-sb-9fA"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="twitterWebView" destination="PVA-RR-lZZ" id="hd3-SP-fJV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
