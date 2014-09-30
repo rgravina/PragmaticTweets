@@ -26,7 +26,11 @@ class ViewController: UIViewController {
     @IBAction func handleTweetButtonTapped(sender: UIButton) {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
             let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            tweetVC.setInitialText("I just finished the first project in iOS 8 SDK Development. #pragsios8")
+            let message = NSBundle.mainBundle().localizedStringForKey(
+                "I just finished the first project in iOS 8 SDK Development. #pragsios8",
+                value: "",
+                table: nil)
+            tweetVC.setInitialText(message)
             self.presentViewController(tweetVC, animated: true, completion: nil)
         } else {
             println("Can't send tweet")

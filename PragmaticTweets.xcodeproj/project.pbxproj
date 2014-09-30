@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		972EE13619DA63AE002E5370 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 972EE13819DA63AE002E5370 /* Localizable.strings */; };
 		ECC1E84319D5181C00D7FE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1E84219D5181C00D7FE17 /* AppDelegate.swift */; };
 		ECC1E84519D5181C00D7FE17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1E84419D5181C00D7FE17 /* ViewController.swift */; };
 		ECC1E84819D5181C00D7FE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC1E84619D5181C00D7FE17 /* Main.storyboard */; };
@@ -26,6 +27,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		972EE13219DA6145002E5370 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		972EE13319DA6145002E5370 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		972EE13719DA63AE002E5370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		972EE13919DA63C3002E5370 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		ECC1E83D19D5181C00D7FE17 /* PragmaticTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC1E84119D5181C00D7FE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC1E84219D5181C00D7FE17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				ECC1E84119D5181C00D7FE17 /* Info.plist */,
+				972EE13819DA63AE002E5370 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = ECC1E83419D5181C00D7FE17;
 			productRefGroup = ECC1E83E19D5181C00D7FE17 /* Products */;
@@ -193,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC1E84819D5181C00D7FE17 /* Main.storyboard in Resources */,
+				972EE13619DA63AE002E5370 /* Localizable.strings in Resources */,
 				ECC1E84D19D5181C00D7FE17 /* LaunchScreen.xib in Resources */,
 				ECC1E84A19D5181C00D7FE17 /* Images.xcassets in Resources */,
 			);
@@ -236,10 +244,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		972EE13819DA63AE002E5370 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				972EE13719DA63AE002E5370 /* Base */,
+				972EE13919DA63C3002E5370 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		ECC1E84619D5181C00D7FE17 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				ECC1E84719D5181C00D7FE17 /* Base */,
+				972EE13219DA6145002E5370 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -248,6 +266,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ECC1E84C19D5181C00D7FE17 /* Base */,
+				972EE13319DA6145002E5370 /* ja */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -407,6 +426,7 @@
 				ECC1E85E19D5181C00D7FE17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECC1E85F19D5181C00D7FE17 /* Build configuration list for PBXNativeTarget "PragmaticTweetsTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +435,7 @@
 				ECC1E86119D5181C00D7FE17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

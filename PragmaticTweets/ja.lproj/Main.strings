@@ -1,0 +1,6 @@
+
+/* Class = "IBUIButton"; normalTitle = "Show My Tweets"; ObjectID = "XOX-Qd-nhG"; */
+"XOX-Qd-nhG.normalTitle" = "自分のツイートを示す";
+
+/* Class = "IBUIButton"; normalTitle = "Send Tweet"; ObjectID = "ail-wf-NyG"; */
+"ail-wf-NyG.normalTitle" = "ツイートを送る";
