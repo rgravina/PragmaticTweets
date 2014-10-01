@@ -9,22 +9,28 @@
 import UIKit
 import Social
 
-public class ViewController: UITableViewController {
-  override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 5;
-  }
+let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/default_profile_6_200x200.png")
 
-  override public func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return "Section \(section)"
+public class ViewController: UITableViewController {
+
+  var parsedTweets: Array<ParsedTweet> = [
+    ParsedTweet(tweetText: "Tweet A. This tweet is longer than the other tweets.", userName: "@pragprog", createdAt: "2014-10-01 23:31:51 JST", userAvatarURL: defaultAvatarURL),
+    ParsedTweet(tweetText: "Tweet B. The second tweet.", userName: "@redqueencoder", createdAt: "2014-10-01 23:31:51 JST", userAvatarURL: defaultAvatarURL),
+    ParsedTweet(tweetText: "Tweet C. The third.", userName: "@invalidname", createdAt: "2014-10-01 23:31:51 JST", userAvatarURL: defaultAvatarURL)
+  ]
+
+  override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    return 1;
   }
 
   override public func tableView(_tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return section + 1;
+    return parsedTweets.count
   }
   
   override public func tableView (_tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
-    cell.textLabel?.text = "Row \(indexPath.row)"
+    let parsedTweet = parsedTweets[indexPath.row]
+    cell.textLabel!.text = parsedTweet.tweetText
     return cell 
   }
 
