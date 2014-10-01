@@ -9,18 +9,33 @@
 import UIKit
 import Social
 
-public class ViewController: UIViewController {
-
-    @IBOutlet weak public var twitterWebView: UIWebView!
+public class ViewController: UITableViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        self.reloadTweets()
     }
 
     override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override public func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 5;
+    }
+
+    override public func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Section \(section)"
+    }
+
+    override public func tableView(_tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return section + 1;
+    }
+    
+    override public func tableView (_tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
+        cell.textLabel?.text = "Row \(indexPath.row)"
+        return cell 
     }
 
     @IBAction func handleTweetButtonTapped(sender: UIButton) {
@@ -35,14 +50,6 @@ public class ViewController: UIViewController {
         } else {
             println("Can't send tweet")
         }
-    }
-
-    @IBAction func handleShowMyTweetsButtonTapped(sender: UIButton) {
-        self.reloadTweets()
-    }
-
-    func reloadTweets() {
-        self.twitterWebView.loadRequest(NSURLRequest(URL: NSURL(string: "http://twitter.com/pragprog")))
     }
 }
 
