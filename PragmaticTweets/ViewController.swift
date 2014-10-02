@@ -47,5 +47,14 @@ public class ViewController: UITableViewController {
       println("Can't send tweet")
     }
   }
+
+  func reloadTweets() {
+    self.tableView.reloadData()
+  }
+
+  override public func viewDidLoad() {
+    super.viewDidLoad()
+    self.reloadTweets()
+  }
 }
 
