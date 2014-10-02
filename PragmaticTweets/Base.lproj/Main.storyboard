@@ -2,13 +2,14 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hMa-cq-VET">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="Gs6-gs-Z7f">
             <objects>
                 <tableViewController id="hMa-cq-VET" customClass="ViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0aI-x0-0ah">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="125" sectionHeaderHeight="22" sectionFooterHeight="22" id="0aI-x0-0ah">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,6 +34,76 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTweetCell" rowHeight="125" id="AVR-Li-U1A" customClass="ParsedTweetCell" customModule="PragmaticTweets" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AVR-Li-U1A" id="7R0-HH-V0I">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mcz-ld-3OR">
+                                            <rect key="frame" x="28" y="28" width="75" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="jbY-VG-4ck"/>
+                                                <constraint firstAttribute="height" constant="75" id="knG-d6-oiw"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdO-d7-bQ8">
+                                            <rect key="frame" x="28" y="110" width="544" height="14"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tweet Text" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSo-f8-UAK">
+                                            <rect key="frame" x="111" y="57" width="461" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mL7-dh-d2n">
+                                            <rect key="frame" x="111" y="28" width="461" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="SSo-f8-UAK" secondAttribute="trailing" constant="13" id="2ko-l9-flR"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FdO-d7-bQ8" secondAttribute="trailing" constant="20" id="6n8-PA-4s7"/>
+                                        <constraint firstItem="FdO-d7-bQ8" firstAttribute="bottom" secondItem="7R0-HH-V0I" secondAttribute="bottomMargin" constant="8" id="7ou-wW-uU5"/>
+                                        <constraint firstItem="SSo-f8-UAK" firstAttribute="top" secondItem="mL7-dh-d2n" secondAttribute="bottom" constant="8" id="BcA-UD-9Tk"/>
+                                        <constraint firstItem="mL7-dh-d2n" firstAttribute="top" secondItem="7R0-HH-V0I" secondAttribute="topMargin" constant="20" id="CBW-5k-nb6"/>
+                                        <constraint firstItem="FdO-d7-bQ8" firstAttribute="leading" secondItem="7R0-HH-V0I" secondAttribute="leadingMargin" constant="20" id="CNU-gu-Ud4"/>
+                                        <constraint firstItem="mcz-ld-3OR" firstAttribute="leading" secondItem="7R0-HH-V0I" secondAttribute="leadingMargin" constant="20" id="Dbt-2d-HA0"/>
+                                        <constraint firstItem="mL7-dh-d2n" firstAttribute="top" secondItem="7R0-HH-V0I" secondAttribute="topMargin" constant="20" id="QEh-Ll-95u"/>
+                                        <constraint firstItem="mcz-ld-3OR" firstAttribute="top" secondItem="7R0-HH-V0I" secondAttribute="topMargin" constant="20" id="S0f-Mc-9Dv"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mL7-dh-d2n" secondAttribute="trailing" constant="372" id="TrD-UP-dnJ"/>
+                                        <constraint firstItem="mL7-dh-d2n" firstAttribute="leading" secondItem="mcz-ld-3OR" secondAttribute="trailing" constant="8" id="XQe-N8-wNU"/>
+                                        <constraint firstItem="SSo-f8-UAK" firstAttribute="leading" secondItem="mcz-ld-3OR" secondAttribute="trailing" constant="25" id="YRQ-tr-rwW"/>
+                                        <constraint firstItem="SSo-f8-UAK" firstAttribute="leading" secondItem="mcz-ld-3OR" secondAttribute="trailing" constant="8" id="bjt-gb-hLy"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="SSo-f8-UAK" secondAttribute="trailing" constant="13" id="drA-HS-ODK"/>
+                                        <constraint firstItem="SSo-f8-UAK" firstAttribute="leading" secondItem="mcz-ld-3OR" secondAttribute="trailing" constant="25" id="fkk-1Y-aUf"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mL7-dh-d2n" secondAttribute="trailing" constant="20" id="leN-Oc-FMh"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="mL7-dh-d2n" secondAttribute="trailing" constant="372" id="vJQ-xZ-Ay9"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="SSo-f8-UAK" secondAttribute="trailing" constant="20" id="wWr-cd-M4k"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="CBW-5k-nb6"/>
+                                            <exclude reference="TrD-UP-dnJ"/>
+                                            <exclude reference="vJQ-xZ-Ay9"/>
+                                            <exclude reference="2ko-l9-flR"/>
+                                            <exclude reference="YRQ-tr-rwW"/>
+                                            <exclude reference="drA-HS-ODK"/>
+                                            <exclude reference="fkk-1Y-aUf"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="mcz-ld-3OR" id="TXg-dT-LES"/>
+                                    <outlet property="createdAtLabel" destination="FdO-d7-bQ8" id="37T-ns-jb4"/>
+                                    <outlet property="tweetTextLabel" destination="SSo-f8-UAK" id="nNA-RI-h7B"/>
+                                    <outlet property="userNameLabel" destination="mL7-dh-d2n" id="Qhs-mo-uJ2"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="hMa-cq-VET" id="Adk-js-3BO"/>
@@ -42,7 +113,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLt-vG-2MH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-287" y="-404"/>
+            <point key="canvasLocation" x="-287" y="-437"/>
         </scene>
     </scenes>
 </document>

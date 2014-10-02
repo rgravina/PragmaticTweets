@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9700D60219DD89D1008449E8 /* ParsedTweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9700D60119DD89D1008449E8 /* ParsedTweetCell.swift */; };
 		972EE13619DA63AE002E5370 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 972EE13819DA63AE002E5370 /* Localizable.strings */; };
 		972EE13B19DC3F1C002E5370 /* ParsedTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EE13A19DC3F1C002E5370 /* ParsedTweet.swift */; };
 		ECC1E84319D5181C00D7FE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1E84219D5181C00D7FE17 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9700D60119DD89D1008449E8 /* ParsedTweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedTweetCell.swift; sourceTree = "<group>"; };
 		972EE13219DA6145002E5370 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		972EE13319DA6145002E5370 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		972EE13719DA63AE002E5370 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				ECC1E84B19D5181C00D7FE17 /* LaunchScreen.xib */,
 				ECC1E84019D5181C00D7FE17 /* Supporting Files */,
 				972EE13A19DC3F1C002E5370 /* ParsedTweet.swift */,
+				9700D60119DD89D1008449E8 /* ParsedTweetCell.swift */,
 			);
 			path = PragmaticTweets;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9700D60219DD89D1008449E8 /* ParsedTweetCell.swift in Sources */,
 				972EE13B19DC3F1C002E5370 /* ParsedTweet.swift in Sources */,
 				ECC1E84519D5181C00D7FE17 /* ViewController.swift in Sources */,
 				ECC1E84319D5181C00D7FE17 /* AppDelegate.swift in Sources */,
