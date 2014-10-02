@@ -59,7 +59,18 @@ public class ViewController: UITableViewController {
 
   override public func viewDidLoad() {
     super.viewDidLoad()
-    self.reloadTweets()
+    reloadTweets()
+    var refresher = UIRefreshControl()
+    refresher.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+    self.refreshControl = refresher
+  }
+
+  @IBAction func handleRefresh(sender: AnyObject?) {
+    self.parsedTweets.append(
+      ParsedTweet(tweetText: "New row", userName: "@refresh", createdAt: NSDate().description, userAvatarURL: defaultAvatarURL)
+    )
+    reloadTweets()
+    refreshControl!.endRefreshing()
   }
 }
 
