@@ -8,6 +8,7 @@
 
 import UIKit
 import Social
+import Accounts
 
 let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/default_profile_6_200x200.png")
 
@@ -54,7 +55,25 @@ public class ViewController: UITableViewController {
   }
 
   func reloadTweets() {
-    self.tableView.reloadData()
+    let accountStore = ACAccountStore()
+    let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
+    accountStore.requestAccessToAccountsWithType(twitterAccountType,
+      options: nil,
+      completion: {
+        (Bool granted, NSError error) -> Void in
+        if (!granted) {
+          println("access not granted")
+        } else {
+          let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
+          if twitterAccounts.count == 0 {
+            println("no twitter accounts configured")
+            return
+          } else {
+            // continue
+          }
+        }
+      }
+    )
   }
 
   override public func viewDidLoad() {
