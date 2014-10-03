@@ -69,7 +69,20 @@ public class ViewController: UITableViewController {
             println("no twitter accounts configured")
             return
           } else {
-            // continue
+            let twitterParams = [
+              "count" : "100"
+            ]
+            let twitterAPIURL = NSURL.URLWithString("https://api.twitter.com/1.1/statuses/home_timeline.json")
+            let request = SLRequest(forServiceType: SLServiceTypeTwitter,
+              requestMethod: SLRequestMethod.GET,
+              URL: twitterAPIURL,
+              parameters :twitterParams
+            )
+            request.account = twitterAccounts[0] as ACAccount
+            request.performRequestWithHandler({
+              (NSData data, NSHTTPURLResponse urlResponse, NSError error) -> Void in
+              self.handleTwitterData(data, urlResponse: urlResponse, error: error)
+            })
           }
         }
       }
@@ -90,6 +103,13 @@ public class ViewController: UITableViewController {
     )
     reloadTweets()
     refreshControl!.endRefreshing()
+  }
+
+  func handleTwitterData (data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!) {
+    if let validData = data {
+    println ("handleTwitterData, \(validData.length) bytes")
+  } else {
+    println ("handleTwitterData received no data") }
   }
 }
 
