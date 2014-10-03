@@ -9,11 +9,7 @@ public class ViewController: UITableViewController {
   
   // sample tweet data... will replace with real tweets
   // var since the array needs to be mutable
-  var parsedTweets: Array<ParsedTweet> = [
-    ParsedTweet(tweetText: "Tweet A. This tweet is longer than the other tweets.", userName: "@pragprog", createdAt: "2014-10-01 23:31:51 JST", userAvatarURL: defaultAvatarURL),
-    ParsedTweet(tweetText: "Tweet B. The second tweet.", userName: "@redqueencoder", createdAt: "2014-10-01 23:31:51 JST", userAvatarURL: defaultAvatarURL),
-    ParsedTweet(tweetText: "Tweet C. The third.", userName: "@invalidname", createdAt: "2014-10-01 23:31:51 JST", userAvatarURL: defaultAvatarURL)
-  ]
+  var parsedTweets: Array<ParsedTweet> = []
 
   //
   // On load - load up timeline and setup refresh control
