@@ -104,7 +104,12 @@ public class ViewController: UITableViewController {
           parsedTweet.userAvatarURL = NSURL(string: userDict["profile_image_url"] as NSString!)
           self.parsedTweets.append(parsedTweet)
         }
-        self.tableView.reloadData()
+        // We shoudln't reload the table on any other thread that the main thread (which this isn't running in).
+        // So, run it on the main queue.
+        dispatch_async(dispatch_get_main_queue(), {
+          () -> Void in
+            self.tableView.reloadData()
+        })
       }
 
   } else {
