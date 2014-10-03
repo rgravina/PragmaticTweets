@@ -81,9 +81,16 @@ public class ViewController: UITableViewController {
     refreshControl!.endRefreshing()
   }
 
+  //
+  // Parse and log the Twitter JSON
+  //
   func handleTwitterData (data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!) {
-    if let validData = data {
-    println ("handleTwitterData, \(validData.length) bytes")
+    if let dataValue = data {
+      // NSError can be nil (so is an optional)
+      var parseError: NSError? = nil
+      // NSJSONSerialization might also return nil (so is an optional)
+      let jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(dataValue, options: NSJSONReadingOptions(0), error: &parseError)
+      println("JSON error: \(parseError)\n JSON response: \(jsonObject)")
   } else {
     println ("handleTwitterData received no data") }
   }
