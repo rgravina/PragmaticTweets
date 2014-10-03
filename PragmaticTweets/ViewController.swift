@@ -138,7 +138,13 @@ public class ViewController: UITableViewController {
     cell.createdAtLabel.text = parsedTweet.createdAt
     if parsedTweet.userAvatarURL != nil {
       // contruct an image from the data at the url
-      cell.avatarImageView.image = UIImage(data: NSData(contentsOfURL: parsedTweet.userAvatarURL!))
+      dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),{
+        () -> Void in
+          let avatarImge = UIImage(data: NSData(contentsOfURL: parsedTweet.userAvatarURL!))
+        dispatch_async(dispatch_get_main_queue(), {
+          cell.avatarImageView.image = avatarImge
+        })
+      })
     }
     return cell
   }
