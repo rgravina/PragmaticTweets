@@ -90,7 +90,23 @@ public class ViewController: UITableViewController {
       var parseError: NSError? = nil
       // NSJSONSerialization might also return nil (so is an optional)
       let jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(dataValue, options: NSJSONReadingOptions(0), error: &parseError)
-      println("JSON error: \(parseError)\n JSON response: \(jsonObject)")
+      if parseError != nil {
+        return
+      }
+      if let jsonArray = jsonObject as? Array<Dictionary<String,AnyObject>> {
+        self.parsedTweets.removeAll(keepCapacity: true)
+        for tweetDict in jsonArray {
+          let parsedTweet = ParsedTweet()
+          parsedTweet.tweetText = tweetDict["text"] as? NSString
+          parsedTweet.createdAt = tweetDict["created_at"] as? NSString
+          let userDict = tweetDict["user"] as NSDictionary
+          parsedTweet.userName = userDict["name"] as? NSString
+          parsedTweet.userAvatarURL = NSURL(string: userDict["profile_image_url"] as NSString!)
+          self.parsedTweets.append(parsedTweet)
+        }
+        self.tableView.reloadData()
+      }
+
   } else {
     println ("handleTwitterData received no data") }
   }
