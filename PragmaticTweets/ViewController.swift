@@ -30,7 +30,9 @@ public class ViewController: UITableViewController {
   // Handle loading/reloading of tweets. Authenticates and gets timeline via API.
   //
   func reloadTweets() {
+    // get the account store
     let accountStore = ACAccountStore()
+    // store twitter account type as we'll use this a couple of times'
     let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
     accountStore.requestAccessToAccountsWithType(twitterAccountType,
       options: nil,
@@ -39,21 +41,28 @@ public class ViewController: UITableViewController {
         if (!granted) {
           println("access not granted")
         } else {
+          // get all twitter accounts
           let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
           if twitterAccounts.count == 0 {
             println("no twitter accounts configured")
             return
           } else {
+            // make an API call to get the first 100 tweets
             let twitterParams = [
               "count" : "100"
             ]
+            // construct a NSURL from a string
             let twitterAPIURL = NSURL.URLWithString("https://api.twitter.com/1.1/statuses/home_timeline.json")
+            // create a request for the Social API
             let request = SLRequest(forServiceType: SLServiceTypeTwitter,
               requestMethod: SLRequestMethod.GET,
               URL: twitterAPIURL,
-              parameters :twitterParams
+              parameters: twitterParams
             )
+            // set the account. Need to cast it because accountStore.accountsWithAccountType
+            // returns AnyObject
             request.account = twitterAccounts[0] as ACAccount
+            // perform the request
             request.performRequestWithHandler({
               (NSData data, NSHTTPURLResponse urlResponse, NSError error) -> Void in
               self.handleTwitterData(data, urlResponse: urlResponse, error: error)
