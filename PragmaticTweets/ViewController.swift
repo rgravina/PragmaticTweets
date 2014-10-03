@@ -142,7 +142,11 @@ public class ViewController: UITableViewController {
         () -> Void in
         let avatarImge = UIImage(data: NSData(contentsOfURL: parsedTweet.userAvatarURL!))
         dispatch_async(dispatch_get_main_queue(), {
-          cell.avatarImageView.image = avatarImge
+          if cell.userNameLabel.text == parsedTweet.userName {
+            cell.avatarImageView.image = avatarImge
+          } else {
+            println("Cell has been reused. Skipping.")
+          }
         })
       })
     }
