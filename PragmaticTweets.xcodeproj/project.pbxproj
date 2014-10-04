@@ -65,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		974DF9B219DFCB56008D959E /* Root VC */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1E84419D5181C00D7FE17 /* RootViewController.swift */,
+				9700D60119DD89D1008449E8 /* ParsedTweetCell.swift */,
+			);
+			name = "Root VC";
+			sourceTree = "<group>";
+		};
 		ECC1E83419D5181C00D7FE17 = {
 			isa = PBXGroup;
 			children = (
@@ -88,14 +97,13 @@
 		ECC1E83F19D5181C00D7FE17 /* PragmaticTweets */ = {
 			isa = PBXGroup;
 			children = (
+				974DF9B219DFCB56008D959E /* Root VC */,
 				ECC1E84219D5181C00D7FE17 /* AppDelegate.swift */,
-				ECC1E84419D5181C00D7FE17 /* RootViewController.swift */,
 				ECC1E84619D5181C00D7FE17 /* Main.storyboard */,
 				ECC1E84919D5181C00D7FE17 /* Images.xcassets */,
 				ECC1E84B19D5181C00D7FE17 /* LaunchScreen.xib */,
 				ECC1E84019D5181C00D7FE17 /* Supporting Files */,
 				972EE13A19DC3F1C002E5370 /* ParsedTweet.swift */,
-				9700D60119DD89D1008449E8 /* ParsedTweetCell.swift */,
 			);
 			path = PragmaticTweets;
 			sourceTree = "<group>";
