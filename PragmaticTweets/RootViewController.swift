@@ -5,7 +5,7 @@ import Accounts
 // constant for default avatar URL
 let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/default_profile_6_200x200.png")
 
-public class ViewController: UITableViewController {
+public class RootViewController: UITableViewController {
   
   // sample tweet data... will replace with real tweets
   // var since the array needs to be mutable

@@ -11,7 +11,7 @@
 		972EE13619DA63AE002E5370 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 972EE13819DA63AE002E5370 /* Localizable.strings */; };
 		972EE13B19DC3F1C002E5370 /* ParsedTweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972EE13A19DC3F1C002E5370 /* ParsedTweet.swift */; };
 		ECC1E84319D5181C00D7FE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1E84219D5181C00D7FE17 /* AppDelegate.swift */; };
-		ECC1E84519D5181C00D7FE17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1E84419D5181C00D7FE17 /* ViewController.swift */; };
+		ECC1E84519D5181C00D7FE17 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1E84419D5181C00D7FE17 /* RootViewController.swift */; };
 		ECC1E84819D5181C00D7FE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC1E84619D5181C00D7FE17 /* Main.storyboard */; };
 		ECC1E84A19D5181C00D7FE17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC1E84919D5181C00D7FE17 /* Images.xcassets */; };
 		ECC1E84D19D5181C00D7FE17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC1E84B19D5181C00D7FE17 /* LaunchScreen.xib */; };
@@ -38,7 +38,7 @@
 		ECC1E83D19D5181C00D7FE17 /* PragmaticTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC1E84119D5181C00D7FE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC1E84219D5181C00D7FE17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECC1E84419D5181C00D7FE17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECC1E84419D5181C00D7FE17 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		ECC1E84719D5181C00D7FE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECC1E84919D5181C00D7FE17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ECC1E84C19D5181C00D7FE17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				ECC1E84219D5181C00D7FE17 /* AppDelegate.swift */,
-				ECC1E84419D5181C00D7FE17 /* ViewController.swift */,
+				ECC1E84419D5181C00D7FE17 /* RootViewController.swift */,
 				ECC1E84619D5181C00D7FE17 /* Main.storyboard */,
 				ECC1E84919D5181C00D7FE17 /* Images.xcassets */,
 				ECC1E84B19D5181C00D7FE17 /* LaunchScreen.xib */,
@@ -230,7 +230,7 @@
 			files = (
 				9700D60219DD89D1008449E8 /* ParsedTweetCell.swift in Sources */,
 				972EE13B19DC3F1C002E5370 /* ParsedTweet.swift in Sources */,
-				ECC1E84519D5181C00D7FE17 /* ViewController.swift in Sources */,
+				ECC1E84519D5181C00D7FE17 /* RootViewController.swift in Sources */,
 				ECC1E84319D5181C00D7FE17 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
