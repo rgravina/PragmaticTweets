@@ -102,6 +102,7 @@
                                     <outlet property="createdAtLabel" destination="FdO-d7-bQ8" id="37T-ns-jb4"/>
                                     <outlet property="tweetTextLabel" destination="SSo-f8-UAK" id="nNA-RI-h7B"/>
                                     <outlet property="userNameLabel" destination="mL7-dh-d2n" id="Qhs-mo-uJ2"/>
+                                    <segue destination="7j9-2H-14G" kind="show" identifier="showTweetDetailsSegue" id="xb8-kT-rLa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -121,6 +122,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLt-vG-2MH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-369" y="-1093"/>
+        </scene>
+        <!--Tweet-->
+        <scene sceneID="QoR-Ju-GM7">
+            <objects>
+                <viewController id="7j9-2H-14G" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TXW-Ce-tbV"/>
+                        <viewControllerLayoutGuide type="bottom" id="fIR-VU-itV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8m7-eU-UXO">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tweet" id="lB3-UK-hGH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70L-M7-Cay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408" y="-1093"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="93b-nI-TOc">
