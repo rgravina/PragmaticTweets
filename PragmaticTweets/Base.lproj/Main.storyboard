@@ -110,7 +110,13 @@
                             <outlet property="delegate" destination="hMa-cq-VET" id="GWa-Z6-YNp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tweets" id="SpB-vB-W6l"/>
+                    <navigationItem key="navigationItem" title="Tweets" id="SpB-vB-W6l">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="EJ7-bU-abZ">
+                            <connections>
+                                <action selector="handleTweetButtonTapped:" destination="hMa-cq-VET" id="KRj-o2-qc1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLt-vG-2MH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

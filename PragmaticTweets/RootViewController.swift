@@ -119,7 +119,7 @@ public class RootViewController: UITableViewController, TwitterAPIRequestDelegat
   // ----
 
   // Not used for now...
-  @IBAction func handleTweetButtonTapped(sender: UIButton) {
+  @IBAction func handleTweetButtonTapped(sender: AnyObject) {
     if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
       let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
       let message = NSBundle.mainBundle().localizedStringForKey(
