@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hMa-cq-VET">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hDx-Md-6xe">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Tweets-->
         <scene sceneID="Gs6-gs-Z7f">
             <objects>
                 <tableViewController id="hMa-cq-VET" customClass="RootViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,10 +110,27 @@
                             <outlet property="delegate" destination="hMa-cq-VET" id="GWa-Z6-YNp"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Tweets" id="SpB-vB-W6l"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLt-vG-2MH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-287" y="-437"/>
+            <point key="canvasLocation" x="-369" y="-1093"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="93b-nI-TOc">
+            <objects>
+                <navigationController id="hDx-Md-6xe" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y3g-My-NAW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hMa-cq-VET" kind="relationship" relationship="rootViewController" id="Wi9-mZ-3Py"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iqF-vx-Hwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1107" y="-1093"/>
         </scene>
     </scenes>
 </document>
