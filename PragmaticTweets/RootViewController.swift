@@ -5,7 +5,7 @@ import Accounts
 // constant for default avatar URL
 let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/default_profile_6_200x200.png")
 
-public class RootViewController: UITableViewController {
+public class RootViewController: UITableViewController, TwitterAPIRequestDelegate {
   
   // sample tweet data... will replace with real tweets
   // var since the array needs to be mutable
@@ -26,47 +26,10 @@ public class RootViewController: UITableViewController {
   // Handle loading/reloading of tweets. Authenticates and gets timeline via API.
   //
   func reloadTweets() {
-    // get the account store
-    let accountStore = ACAccountStore()
-    // store twitter account type as we'll use this a couple of times'
-    let twitterAccountType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)
-    accountStore.requestAccessToAccountsWithType(twitterAccountType,
-      options: nil,
-      completion: {
-        (Bool granted, NSError error) -> Void in
-        if (!granted) {
-          println("access not granted")
-        } else {
-          // get all twitter accounts
-          let twitterAccounts = accountStore.accountsWithAccountType(twitterAccountType)
-          if twitterAccounts.count == 0 {
-            println("no twitter accounts configured")
-            return
-          } else {
-            // make an API call to get the first 100 tweets
-            let twitterParams = [
-              "count" : "100"
-            ]
-            // construct a NSURL from a string
-            let twitterAPIURL = NSURL.URLWithString("https://api.twitter.com/1.1/statuses/home_timeline.json")
-            // create a request for the Social API
-            let request = SLRequest(forServiceType: SLServiceTypeTwitter,
-              requestMethod: SLRequestMethod.GET,
-              URL: twitterAPIURL,
-              parameters: twitterParams
-            )
-            // set the account. Need to cast it because accountStore.accountsWithAccountType
-            // returns AnyObject
-            request.account = twitterAccounts[0] as ACAccount
-            // perform the request
-            request.performRequestWithHandler({
-              (NSData data, NSHTTPURLResponse urlResponse, NSError error) -> Void in
-              self.handleTwitterData(data, urlResponse: urlResponse, error: error)
-            })
-          }
-        }
-      }
-    )
+    let twitterParams:Dictionary = ["count":"100"]
+    let twitterAPIURL = NSURL.URLWithString("https://api.twitter.com/1.1/statuses/home_timeline.json")
+    let request = TwitterAPIRequest()
+    request.sendTwitterRequest(twitterAPIURL, params: twitterParams, delegate: self)
   }
 
   @IBAction func handleRefresh(sender: AnyObject?) {
@@ -80,7 +43,7 @@ public class RootViewController: UITableViewController {
   //
   // Parse and log the Twitter JSON
   //
-  func handleTwitterData (data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!) {
+  func handleTwitterData (data: NSData!, urlResponse: NSHTTPURLResponse!, error: NSError!, fromRequest: TwitterAPIRequest!) {
     if let dataValue = data {
       // NSError can be nil (so is an optional)
       var parseError: NSError? = nil
