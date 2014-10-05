@@ -56,6 +56,7 @@ public class RootViewController: UITableViewController, TwitterAPIRequestDelegat
         self.parsedTweets.removeAll(keepCapacity: true)
         for tweetDict in jsonArray {
           let parsedTweet = ParsedTweet()
+          parsedTweet.tweetIdString = tweetDict["id_str"] as? NSString
           parsedTweet.tweetText = tweetDict["text"] as? NSString
           parsedTweet.createdAt = tweetDict["created_at"] as? NSString
           let userDict = tweetDict["user"] as NSDictionary
@@ -118,7 +119,17 @@ public class RootViewController: UITableViewController, TwitterAPIRequestDelegat
 
   // ----
 
-  // Not used for now...
+  override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "showTweetDetailsSegue" {
+      if let tweetDetailVC = segue.destinationViewController as? TweetDetailViewController {
+        let row = self.tableView!.indexPathForSelectedRow()!.row
+        let parsedTweet = parsedTweets [row] as ParsedTweet
+        println ("tapped on: \(parsedTweet.tweetText!)")
+        tweetDetailVC.tweetIdString = parsedTweet.tweetIdString
+      }
+    }
+  }
+
   @IBAction func handleTweetButtonTapped(sender: AnyObject) {
     if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
       let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)

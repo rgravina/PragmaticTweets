@@ -126,7 +126,7 @@
         <!--Tweet-->
         <scene sceneID="QoR-Ju-GM7">
             <objects>
-                <viewController id="7j9-2H-14G" sceneMemberID="viewController">
+                <viewController id="7j9-2H-14G" customClass="TweetDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TXW-Ce-tbV"/>
                         <viewControllerLayoutGuide type="bottom" id="fIR-VU-itV"/>
