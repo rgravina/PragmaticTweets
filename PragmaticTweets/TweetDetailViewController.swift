@@ -46,6 +46,25 @@ class TweetDetailViewController: UIViewController, TwitterAPIRequestDelegate {
           let userImageURL = NSURL(string: userDict["profile_image_url"] as NSString!)
           self.userImageButton.setTitle(nil, forState: UIControlState.Normal)
           self.userImageButton.setImage(UIImage(data: NSData(contentsOfURL: userImageURL)), forState: UIControlState.Normal)
+
+          // add map info for tweet
+          if let geoDict = tweetDict["geo"] as? NSDictionary {
+            let coordinates = geoDict["coordinates"] as NSArray
+            if coordinates.count == 2 {
+              let latitude = (coordinates[0] as NSNumber).doubleValue
+              let longitude = (coordinates[1] as NSNumber).doubleValue
+              let tweetCoordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+              self.tweetLocationMapView.centerCoordinate = tweetCoordinate
+              let pointAnnotation = MKPointAnnotation()
+              pointAnnotation.coordinate = tweetCoordinate
+              self.tweetLocationMapView.removeAnnotations(self.tweetLocationMapView.annotations)
+              self.tweetLocationMapView.addAnnotation(pointAnnotation)
+              self.tweetLocationMapView.setRegion(MKCoordinateRegion(center: tweetCoordinate, span: MKCoordinateSpanMake(1.0, 1.0)), animated: true)
+              self.tweetLocationMapView.hidden = false
+            } else {
+              self.tweetLocationMapView.hidden = true
+            }
+          }
         })
       }
     } else {
