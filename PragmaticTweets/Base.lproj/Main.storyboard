@@ -282,10 +282,10 @@
             </objects>
             <point key="canvasLocation" x="408" y="-1093"/>
         </scene>
-        <!--View Controller-->
+        <!--User Detail View Controller-->
         <scene sceneID="ZF1-F8-jYX">
             <objects>
-                <viewController id="dwC-S0-WBE" sceneMemberID="viewController">
+                <viewController id="dwC-S0-WBE" customClass="UserDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Hx-De-a19"/>
                         <viewControllerLayoutGuide type="bottom" id="etu-Rb-IkN"/>
@@ -428,6 +428,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="userDescriptionLabel" destination="xMm-eM-fAy" id="g8I-JP-jzb"/>
+                        <outlet property="userImageView" destination="mY1-jY-4S6" id="kSY-Cx-CgE"/>
+                        <outlet property="userLocationLabel" destination="762-Lw-wFl" id="FDB-6P-nhz"/>
+                        <outlet property="userRealNameLabel" destination="t2Y-ru-Voj" id="D0c-dW-wcR"/>
+                        <outlet property="userScreenNameLabel" destination="Arg-0t-yom" id="6A9-bI-GFh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kem-nx-aJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
