@@ -72,11 +72,15 @@ class TweetDetailViewController: UIViewController, TwitterAPIRequestDelegate {
     }
   }
 
-  override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-    if (segue!.identifier == "showUserDetailsSegue") {
-      if let userDetailVC = segue!.destinationViewController as? UserDetailViewController {
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if (segue.identifier == "showUserDetailsSegue") {
+      if let userDetailVC = segue.destinationViewController as? UserDetailViewController {
         userDetailVC.screenName = self.userScreenNameLabel!.text
       }
     }
+  }
+
+  @IBAction func unwindToDetailVC(segue: UIStoryboardSegue?) {
+
   }
 }
