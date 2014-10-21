@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hDx-Md-6xe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hDx-Md-6xe">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -291,30 +291,9 @@
                         <viewControllerLayoutGuide type="bottom" id="etu-Rb-IkN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RVX-9w-Pbw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mY1-jY-4S6">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="XsK-3Z-c4W"/>
-                                    <constraint firstAttribute="height" constant="100" id="YdG-lv-5tn"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="d1p-OX-Y4p"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="XsK-3Z-c4W"/>
-                                        <exclude reference="YdG-lv-5tn"/>
-                                        <exclude reference="d1p-OX-Y4p"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="XsK-3Z-c4W"/>
-                                        <include reference="YdG-lv-5tn"/>
-                                        <exclude reference="d1p-OX-Y4p"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2Y-ru-Voj">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -345,15 +324,40 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mY1-jY-4S6">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="XsK-3Z-c4W"/>
+                                    <constraint firstAttribute="height" constant="100" id="YdG-lv-5tn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="d1p-OX-Y4p"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XsK-3Z-c4W"/>
+                                        <exclude reference="YdG-lv-5tn"/>
+                                        <exclude reference="d1p-OX-Y4p"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XsK-3Z-c4W"/>
+                                        <include reference="YdG-lv-5tn"/>
+                                        <exclude reference="d1p-OX-Y4p"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="rds-kt-cTo" secondAttribute="centerX" id="01R-xP-Jz2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Arg-0t-yom" secondAttribute="trailing" constant="20" id="0pM-JH-6JY"/>
                             <constraint firstItem="762-Lw-wFl" firstAttribute="leading" secondItem="RVX-9w-Pbw" secondAttribute="leadingMargin" constant="20" id="2kK-Bb-pCd"/>
+                            <constraint firstItem="mY1-jY-4S6" firstAttribute="top" secondItem="2Hx-De-a19" secondAttribute="bottom" id="8tk-FH-sdD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xMm-eM-fAy" secondAttribute="trailing" constant="20" id="AkQ-Cx-W1l"/>
                             <constraint firstItem="rds-kt-cTo" firstAttribute="top" secondItem="xMm-eM-fAy" secondAttribute="bottom" constant="8" id="M0T-0a-Z73"/>
-                            <constraint firstItem="mY1-jY-4S6" firstAttribute="top" secondItem="RVX-9w-Pbw" secondAttribute="topMargin" id="MFc-3H-jL0"/>
+                            <constraint firstItem="mY1-jY-4S6" firstAttribute="top" secondItem="RVX-9w-Pbw" secondAttribute="topMargin" id="MFc-3H-jL0">
+                                <variation key="widthClass=compact" constant="8"/>
+                            </constraint>
                             <constraint firstItem="Arg-0t-yom" firstAttribute="leading" secondItem="RVX-9w-Pbw" secondAttribute="leadingMargin" constant="20" id="N46-OQ-745"/>
                             <constraint firstItem="t2Y-ru-Voj" firstAttribute="leading" secondItem="RVX-9w-Pbw" secondAttribute="leadingMargin" constant="20" id="PGx-eO-mQV"/>
                             <constraint firstItem="762-Lw-wFl" firstAttribute="top" secondItem="Arg-0t-yom" secondAttribute="bottom" constant="8" id="Pab-Iq-RNX"/>
@@ -364,25 +368,28 @@
                             <constraint firstAttribute="centerX" secondItem="mY1-jY-4S6" secondAttribute="centerX" id="cHC-jO-35K"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t2Y-ru-Voj" secondAttribute="trailing" constant="20" id="ggs-iZ-8qQ"/>
                             <constraint firstItem="rds-kt-cTo" firstAttribute="top" secondItem="xMm-eM-fAy" secondAttribute="bottom" constant="8" id="hAE-Ea-3sa"/>
+                            <constraint firstItem="mY1-jY-4S6" firstAttribute="top" secondItem="RVX-9w-Pbw" secondAttribute="topMargin" constant="8" id="iXU-Sm-6Gx"/>
                             <constraint firstItem="xMm-eM-fAy" firstAttribute="leading" secondItem="RVX-9w-Pbw" secondAttribute="leadingMargin" constant="20" id="t3I-cX-uyO"/>
                             <constraint firstItem="Arg-0t-yom" firstAttribute="top" secondItem="t2Y-ru-Voj" secondAttribute="bottom" constant="8" id="yj3-Cs-Dio"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="mY1-jY-4S6"/>
                                 <exclude reference="t2Y-ru-Voj"/>
                                 <exclude reference="Arg-0t-yom"/>
                                 <exclude reference="762-Lw-wFl"/>
                                 <exclude reference="xMm-eM-fAy"/>
                                 <exclude reference="rds-kt-cTo"/>
+                                <exclude reference="mY1-jY-4S6"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="PGx-eO-mQV"/>
                                 <exclude reference="QtZ-jg-Z7Z"/>
                                 <exclude reference="Sxj-RQ-Wkr"/>
                                 <exclude reference="ggs-iZ-8qQ"/>
+                                <exclude reference="8tk-FH-sdD"/>
                                 <exclude reference="MFc-3H-jL0"/>
                                 <exclude reference="cHC-jO-35K"/>
+                                <exclude reference="iXU-Sm-6Gx"/>
                                 <exclude reference="0pM-JH-6JY"/>
                                 <exclude reference="N46-OQ-745"/>
                                 <exclude reference="yj3-Cs-Dio"/>
@@ -399,20 +406,22 @@
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="mY1-jY-4S6"/>
                                 <include reference="t2Y-ru-Voj"/>
                                 <include reference="Arg-0t-yom"/>
                                 <include reference="762-Lw-wFl"/>
                                 <include reference="xMm-eM-fAy"/>
                                 <include reference="rds-kt-cTo"/>
+                                <include reference="mY1-jY-4S6"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="PGx-eO-mQV"/>
                                 <exclude reference="QtZ-jg-Z7Z"/>
                                 <include reference="Sxj-RQ-Wkr"/>
                                 <include reference="ggs-iZ-8qQ"/>
-                                <include reference="MFc-3H-jL0"/>
+                                <include reference="8tk-FH-sdD"/>
+                                <exclude reference="MFc-3H-jL0"/>
                                 <include reference="cHC-jO-35K"/>
+                                <exclude reference="iXU-Sm-6Gx"/>
                                 <include reference="0pM-JH-6JY"/>
                                 <include reference="N46-OQ-745"/>
                                 <include reference="yj3-Cs-Dio"/>
