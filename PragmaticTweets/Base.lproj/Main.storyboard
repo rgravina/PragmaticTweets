@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hDx-Md-6xe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="20w-n5-X0Y">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -103,7 +103,6 @@
                                     <outlet property="createdAtLabel" destination="FdO-d7-bQ8" id="37T-ns-jb4"/>
                                     <outlet property="tweetTextLabel" destination="SSo-f8-UAK" id="nNA-RI-h7B"/>
                                     <outlet property="userNameLabel" destination="mL7-dh-d2n" id="Qhs-mo-uJ2"/>
-                                    <segue destination="7j9-2H-14G" kind="show" identifier="showTweetDetailsSegue" id="xb8-kT-rLa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -122,12 +121,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bLt-vG-2MH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-369" y="-1093"/>
+            <point key="canvasLocation" x="2238" y="-782"/>
         </scene>
         <!--Tweet-->
         <scene sceneID="QoR-Ju-GM7">
             <objects>
-                <viewController id="7j9-2H-14G" customClass="TweetDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TweetDetailVC" id="7j9-2H-14G" customClass="TweetDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TXW-Ce-tbV"/>
                         <viewControllerLayoutGuide type="bottom" id="fIR-VU-itV"/>
@@ -280,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70L-M7-Cay" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="408" y="-1093"/>
+            <point key="canvasLocation" x="1302" y="-27"/>
         </scene>
         <!--User Detail View Controller-->
         <scene sceneID="ZF1-F8-jYX">
@@ -385,26 +384,26 @@
                                 <exclude reference="mY1-jY-4S6"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="2kK-Bb-pCd"/>
+                                <exclude reference="Pab-Iq-RNX"/>
+                                <exclude reference="SAR-7Z-M80"/>
+                                <exclude reference="0pM-JH-6JY"/>
+                                <exclude reference="N46-OQ-745"/>
+                                <exclude reference="yj3-Cs-Dio"/>
                                 <exclude reference="PGx-eO-mQV"/>
                                 <exclude reference="QtZ-jg-Z7Z"/>
                                 <exclude reference="Sxj-RQ-Wkr"/>
                                 <exclude reference="ggs-iZ-8qQ"/>
-                                <exclude reference="8tk-FH-sdD"/>
-                                <exclude reference="MFc-3H-jL0"/>
-                                <exclude reference="cHC-jO-35K"/>
-                                <exclude reference="iXU-Sm-6Gx"/>
-                                <exclude reference="0pM-JH-6JY"/>
-                                <exclude reference="N46-OQ-745"/>
-                                <exclude reference="yj3-Cs-Dio"/>
-                                <exclude reference="2kK-Bb-pCd"/>
-                                <exclude reference="Pab-Iq-RNX"/>
-                                <exclude reference="SAR-7Z-M80"/>
                                 <exclude reference="AkQ-Cx-W1l"/>
                                 <exclude reference="aez-hI-Xuy"/>
                                 <exclude reference="t3I-cX-uyO"/>
                                 <exclude reference="01R-xP-Jz2"/>
                                 <exclude reference="M0T-0a-Z73"/>
                                 <exclude reference="hAE-Ea-3sa"/>
+                                <exclude reference="8tk-FH-sdD"/>
+                                <exclude reference="MFc-3H-jL0"/>
+                                <exclude reference="cHC-jO-35K"/>
+                                <exclude reference="iXU-Sm-6Gx"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -417,26 +416,26 @@
                                 <include reference="mY1-jY-4S6"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="2kK-Bb-pCd"/>
+                                <include reference="Pab-Iq-RNX"/>
+                                <include reference="SAR-7Z-M80"/>
+                                <include reference="0pM-JH-6JY"/>
+                                <include reference="N46-OQ-745"/>
+                                <include reference="yj3-Cs-Dio"/>
                                 <include reference="PGx-eO-mQV"/>
                                 <exclude reference="QtZ-jg-Z7Z"/>
                                 <include reference="Sxj-RQ-Wkr"/>
                                 <include reference="ggs-iZ-8qQ"/>
-                                <include reference="8tk-FH-sdD"/>
-                                <exclude reference="MFc-3H-jL0"/>
-                                <include reference="cHC-jO-35K"/>
-                                <exclude reference="iXU-Sm-6Gx"/>
-                                <include reference="0pM-JH-6JY"/>
-                                <include reference="N46-OQ-745"/>
-                                <include reference="yj3-Cs-Dio"/>
-                                <include reference="2kK-Bb-pCd"/>
-                                <include reference="Pab-Iq-RNX"/>
-                                <include reference="SAR-7Z-M80"/>
                                 <include reference="AkQ-Cx-W1l"/>
                                 <include reference="aez-hI-Xuy"/>
                                 <include reference="t3I-cX-uyO"/>
                                 <include reference="01R-xP-Jz2"/>
                                 <include reference="M0T-0a-Z73"/>
                                 <exclude reference="hAE-Ea-3sa"/>
+                                <include reference="8tk-FH-sdD"/>
+                                <exclude reference="MFc-3H-jL0"/>
+                                <include reference="cHC-jO-35K"/>
+                                <exclude reference="iXU-Sm-6Gx"/>
                             </mask>
                         </variation>
                     </view>
@@ -451,23 +450,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kem-nx-aJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="x0M-P1-aAE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1213.5" y="-1093"/>
+            <point key="canvasLocation" x="2238" y="-27"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="93b-nI-TOc">
+        <scene sceneID="VGD-QI-XG7">
             <objects>
-                <navigationController id="hDx-Md-6xe" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y3g-My-NAW">
+                <navigationController id="OvT-Fk-aO8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="34o-Dm-JGr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="hMa-cq-VET" kind="relationship" relationship="rootViewController" id="Wi9-mZ-3Py"/>
+                        <segue destination="hMa-cq-VET" kind="relationship" relationship="rootViewController" id="Agk-0U-nR2"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iqF-vx-Hwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y1e-Dg-IPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1107" y="-1093"/>
+            <point key="canvasLocation" x="1302" y="-782"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="HCk-40-vIl">
+            <objects>
+                <splitViewController id="20w-n5-X0Y" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="OvT-Fk-aO8" kind="relationship" relationship="masterViewController" id="Rcy-8N-miv"/>
+                        <segue destination="7j9-2H-14G" kind="relationship" relationship="detailViewController" id="rwK-bS-FUk"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OaO-8M-tik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="-357"/>
         </scene>
     </scenes>
 </document>

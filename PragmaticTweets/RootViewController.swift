@@ -5,7 +5,7 @@ import Accounts
 // constant for default avatar URL
 let defaultAvatarURL = NSURL(string: "https://abs.twimg.com/sticky/default_profile_images/default_profile_6_200x200.png")
 
-public class RootViewController: UITableViewController, TwitterAPIRequestDelegate {
+public class RootViewController: UITableViewController, TwitterAPIRequestDelegate, UISplitViewControllerDelegate {
   
   // sample tweet data... will replace with real tweets
   // var since the array needs to be mutable
@@ -20,6 +20,9 @@ public class RootViewController: UITableViewController, TwitterAPIRequestDelegat
     var refresher = UIRefreshControl()
     refresher.addTarget(self, action: "handleRefresh:", forControlEvents: UIControlEvents.ValueChanged)
     self.refreshControl = refresher
+    if self.splitViewController != nil {
+      self.splitViewController!.delegate = self
+    }
   }
 
   //
@@ -119,16 +122,6 @@ public class RootViewController: UITableViewController, TwitterAPIRequestDelegat
 
   // ----
 
-  override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "showTweetDetailsSegue" {
-      if let tweetDetailVC = segue.destinationViewController as? TweetDetailViewController {
-        let row = self.tableView!.indexPathForSelectedRow()!.row
-        let parsedTweet = parsedTweets [row] as ParsedTweet
-        tweetDetailVC.tweetIdString = parsedTweet.tweetIdString
-      }
-    }
-  }
-
   @IBAction func handleTweetButtonTapped(sender: AnyObject) {
     if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
       let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
@@ -141,6 +134,28 @@ public class RootViewController: UITableViewController, TwitterAPIRequestDelegat
     } else {
       println("Can't send tweet")
     }
+  }
+
+  override public func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let parsedTweet = parsedTweets[indexPath.row]
+    if self.splitViewController != nil {
+      if (self.splitViewController!.viewControllers.count > 1) {
+        if let tweetDetailVC = self.splitViewController!.viewControllers[1] as? TweetDetailViewController {
+          tweetDetailVC.tweetIdString = parsedTweet.tweetIdString!
+          tweetDetailVC.reloadTweetDetails()
+        }
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+      } else {
+        if let detailVC = self.storyboard!.instantiateViewControllerWithIdentifier("TweetDetailVC") as? TweetDetailViewController {
+          detailVC.tweetIdString = parsedTweet.tweetIdString
+          self.splitViewController!.showDetailViewController(detailVC, sender: self)
+        }
+      }
+    }
+  }
+
+  func splitViewController(_splitViewController: UISplitViewController!, collapseSecondaryViewController secondaryViewController: UIViewController!,ontoPrimaryViewController primaryViewController: UIViewController!) -> Bool {
+    return true
   }
 }
 
