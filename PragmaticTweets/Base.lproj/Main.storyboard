@@ -123,7 +123,7 @@
             </objects>
             <point key="canvasLocation" x="2238" y="-782"/>
         </scene>
-        <!--Tweet-->
+        <!--Tweet Detail View Controller-->
         <scene sceneID="QoR-Ju-GM7">
             <objects>
                 <viewController storyboardIdentifier="TweetDetailVC" id="7j9-2H-14G" customClass="TweetDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
@@ -185,17 +185,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0Nc-3n-7N7" firstAttribute="top" secondItem="kIN-4d-9ld" secondAttribute="bottom" constant="8" id="3Fy-rU-UJn"/>
-                            <constraint firstItem="9WZ-nE-gXh" firstAttribute="leading" secondItem="kIN-4d-9ld" secondAttribute="trailing" constant="8" id="6dV-sN-tDB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9WZ-nE-gXh" secondAttribute="trailing" constant="20" id="Egq-bk-pnX"/>
                             <constraint firstItem="0Nc-3n-7N7" firstAttribute="leading" secondItem="8m7-eU-UXO" secondAttribute="leadingMargin" constant="20" id="LrA-i0-pw4"/>
                             <constraint firstItem="9WZ-nE-gXh" firstAttribute="leading" secondItem="kIN-4d-9ld" secondAttribute="trailing" constant="8" id="OHe-Fx-n5Z"/>
-                            <constraint firstItem="9WZ-nE-gXh" firstAttribute="leading" secondItem="kIN-4d-9ld" secondAttribute="trailing" constant="8" id="RBD-9n-ZQq"/>
                             <constraint firstItem="fIR-VU-itV" firstAttribute="top" secondItem="7zy-PC-SLN" secondAttribute="bottom" constant="20" id="REe-ut-9qL"/>
                             <constraint firstItem="MTf-Zo-D8I" firstAttribute="top" secondItem="9WZ-nE-gXh" secondAttribute="bottom" constant="8" id="X5J-pX-Bly"/>
                             <constraint firstItem="7zy-PC-SLN" firstAttribute="leading" secondItem="8m7-eU-UXO" secondAttribute="leadingMargin" constant="20" id="a4E-NI-iy0"/>
-                            <constraint firstItem="9WZ-nE-gXh" firstAttribute="top" secondItem="TXW-Ce-tbV" secondAttribute="bottom" constant="39" id="bkQ-CG-qvV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MTf-Zo-D8I" secondAttribute="trailing" constant="20" id="buO-Ic-jgh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9WZ-nE-gXh" secondAttribute="trailing" constant="20" id="d9w-oQ-3dh"/>
                             <constraint firstItem="MTf-Zo-D8I" firstAttribute="leading" secondItem="kIN-4d-9ld" secondAttribute="trailing" constant="8" id="dTY-Wc-TqG"/>
                             <constraint firstItem="kIN-4d-9ld" firstAttribute="top" secondItem="TXW-Ce-tbV" secondAttribute="bottom" constant="20" id="fZe-Sj-Nwm"/>
                             <constraint firstItem="9WZ-nE-gXh" firstAttribute="top" secondItem="kIN-4d-9ld" secondAttribute="top" id="gOc-eN-yv4"/>
@@ -203,7 +199,6 @@
                             <constraint firstItem="7zy-PC-SLN" firstAttribute="top" secondItem="0Nc-3n-7N7" secondAttribute="bottom" constant="8" id="kag-Ka-dIo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7zy-PC-SLN" secondAttribute="trailing" constant="20" id="rUA-Vj-Apj"/>
                             <constraint firstItem="kIN-4d-9ld" firstAttribute="leading" secondItem="8m7-eU-UXO" secondAttribute="leadingMargin" constant="20" id="sUZ-Kh-6qW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9WZ-nE-gXh" secondAttribute="trailing" constant="20" id="wIg-nl-0rY"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -217,14 +212,9 @@
                                 <exclude reference="3Fy-rU-UJn"/>
                                 <exclude reference="LrA-i0-pw4"/>
                                 <exclude reference="hYg-ms-yC4"/>
-                                <exclude reference="6dV-sN-tDB"/>
                                 <exclude reference="Egq-bk-pnX"/>
                                 <exclude reference="OHe-Fx-n5Z"/>
-                                <exclude reference="RBD-9n-ZQq"/>
-                                <exclude reference="bkQ-CG-qvV"/>
-                                <exclude reference="d9w-oQ-3dh"/>
                                 <exclude reference="gOc-eN-yv4"/>
-                                <exclude reference="wIg-nl-0rY"/>
                                 <exclude reference="X5J-pX-Bly"/>
                                 <exclude reference="buO-Ic-jgh"/>
                                 <exclude reference="dTY-Wc-TqG"/>
@@ -248,14 +238,9 @@
                                 <include reference="3Fy-rU-UJn"/>
                                 <include reference="LrA-i0-pw4"/>
                                 <include reference="hYg-ms-yC4"/>
-                                <exclude reference="6dV-sN-tDB"/>
                                 <include reference="Egq-bk-pnX"/>
                                 <include reference="OHe-Fx-n5Z"/>
-                                <exclude reference="RBD-9n-ZQq"/>
-                                <exclude reference="bkQ-CG-qvV"/>
-                                <exclude reference="d9w-oQ-3dh"/>
                                 <include reference="gOc-eN-yv4"/>
-                                <exclude reference="wIg-nl-0rY"/>
                                 <include reference="X5J-pX-Bly"/>
                                 <include reference="buO-Ic-jgh"/>
                                 <include reference="dTY-Wc-TqG"/>
@@ -268,7 +253,6 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Tweet" id="lB3-UK-hGH"/>
                     <connections>
                         <outlet property="tweetLocationMapView" destination="7zy-PC-SLN" id="X24-sS-etK"/>
                         <outlet property="tweetTextLabel" destination="0Nc-3n-7N7" id="wf4-Aa-XkJ"/>

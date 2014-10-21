@@ -80,7 +80,7 @@ class TweetDetailViewController: UIViewController, TwitterAPIRequestDelegate {
     }
   }
 
-  @IBAction func unwindToDetailVC(segue: UIStoryboardSegue?) {
+  @IBAction func unwindToTweetDetailVC(segue: UIStoryboardSegue?) {
 
   }
 }
