@@ -27,7 +27,7 @@ public class RootViewController: UITableViewController, TwitterAPIRequestDelegat
   //
   func reloadTweets() {
     let twitterParams:Dictionary = ["count":"100"]
-    let twitterAPIURL = NSURL.URLWithString("https://api.twitter.com/1.1/statuses/home_timeline.json")
+    let twitterAPIURL = NSURL(string:"https://api.twitter.com/1.1/statuses/home_timeline.json")
     let request = TwitterAPIRequest()
     request.sendTwitterRequest(twitterAPIURL, params: twitterParams, delegate: self)
   }
@@ -104,7 +104,7 @@ public class RootViewController: UITableViewController, TwitterAPIRequestDelegat
       // contruct an image from the data at the url
       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),{
         () -> Void in
-        let avatarImge = UIImage(data: NSData(contentsOfURL: parsedTweet.userAvatarURL!))
+        let avatarImge = UIImage(data: NSData(contentsOfURL: parsedTweet.userAvatarURL!)!)
         dispatch_async(dispatch_get_main_queue(), {
           if cell.userNameLabel.text == parsedTweet.userName {
             cell.avatarImageView.image = avatarImge

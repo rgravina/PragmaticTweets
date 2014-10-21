@@ -45,7 +45,7 @@ class TweetDetailViewController: UIViewController, TwitterAPIRequestDelegate {
           self.tweetTextLabel.text = tweetDict["text"] as? NSString
           let userImageURL = NSURL(string: userDict["profile_image_url"] as NSString!)
           self.userImageButton.setTitle(nil, forState: UIControlState.Normal)
-          self.userImageButton.setImage(UIImage(data: NSData(contentsOfURL: userImageURL)), forState: UIControlState.Normal)
+          self.userImageButton.setImage(UIImage(data: NSData(contentsOfURL: userImageURL!)!), forState: UIControlState.Normal)
 
           // add map info for tweet
           if let geoDict = tweetDict["geo"] as? NSDictionary {
