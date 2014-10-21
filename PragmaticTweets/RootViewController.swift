@@ -124,7 +124,6 @@ public class RootViewController: UITableViewController, TwitterAPIRequestDelegat
       if let tweetDetailVC = segue.destinationViewController as? TweetDetailViewController {
         let row = self.tableView!.indexPathForSelectedRow()!.row
         let parsedTweet = parsedTweets [row] as ParsedTweet
-        println ("tapped on: \(parsedTweet.tweetText!)")
         tweetDetailVC.tweetIdString = parsedTweet.tweetIdString
       }
     }
