@@ -166,7 +166,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTf-Zo-D8I">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Screen Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTf-Zo-D8I">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -254,11 +254,11 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="tweetLocationMapView" destination="7zy-PC-SLN" id="X24-sS-etK"/>
-                        <outlet property="tweetTextLabel" destination="0Nc-3n-7N7" id="wf4-Aa-XkJ"/>
-                        <outlet property="userImageButton" destination="kIN-4d-9ld" id="gnC-if-zKh"/>
-                        <outlet property="userRealNameLabel" destination="9WZ-nE-gXh" id="2Ru-Yg-cB3"/>
-                        <outlet property="userScreenNameLabel" destination="MTf-Zo-D8I" id="Ffb-VS-95U"/>
+                        <outlet property="tweetLocationMapView" destination="7zy-PC-SLN" id="hHw-iM-Lbb"/>
+                        <outlet property="tweetTextLabel" destination="0Nc-3n-7N7" id="B3p-jo-JeF"/>
+                        <outlet property="userImageButton" destination="kIN-4d-9ld" id="tjV-SB-S9N"/>
+                        <outlet property="userRealNameLabel" destination="9WZ-nE-gXh" id="fJ5-Ez-moA"/>
+                        <outlet property="userScreenNameLabel" destination="MTf-Zo-D8I" id="bxm-Vw-lHs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70L-M7-Cay" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -307,7 +307,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="x0M-P1-aAE" kind="unwind" unwindAction="unwindToDetailVC:" id="Hc9-7r-0q7"/>
+                                    <segue destination="x0M-P1-aAE" kind="unwind" unwindAction="unwindToTweetDetailVC:" id="5oa-gg-Tuv"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mY1-jY-4S6">
