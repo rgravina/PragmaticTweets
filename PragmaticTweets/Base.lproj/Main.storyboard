@@ -154,7 +154,7 @@
         <!--Tweet Detail View Controller-->
         <scene sceneID="cFz-oU-qEa">
             <objects>
-                <viewController id="N6M-Gy-GDZ" customClass="TweetDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TweetDetailVC" id="N6M-Gy-GDZ" customClass="TweetDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AMO-Ca-Zlb"/>
                         <viewControllerLayoutGuide type="bottom" id="OVp-ex-9Pj"/>
@@ -232,8 +232,6 @@
         <!--User-->
         <scene sceneID="XWG-sB-x3i">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lEb-Pj-bTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="fvi-40-Dde" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController id="xuT-el-AGh" customClass="UserDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="upK-nf-sg8"/>
@@ -313,6 +311,8 @@
                         <outlet property="userScreenNameLabel" destination="4y8-a3-Ife" id="kH6-2x-eHm"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lEb-Pj-bTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="fvi-40-Dde" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2238" y="-113"/>
         </scene>
