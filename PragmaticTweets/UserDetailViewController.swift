@@ -53,6 +53,10 @@ class UserDetailViewController: UIViewController, TwitterAPIRequestDelegate {
     }
   }
 
+  @IBAction func unwindToUserDetailVC (segue : UIStoryboardSegue) {
+
+  }
+
   /*
   // MARK: - Navigation
 
