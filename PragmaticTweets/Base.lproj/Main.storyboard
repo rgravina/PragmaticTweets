@@ -351,21 +351,22 @@
                 <exit id="fvi-40-Dde" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="A0Q-DP-tuK">
                     <connections>
-                        <segue destination="LUh-T8-oF8" kind="presentation" id="ea6-xy-JFH"/>
+                        <segue destination="LUh-T8-oF8" kind="presentation" identifier="showUserDetailImageSegue" id="ea6-xy-JFH"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2238" y="-113"/>
         </scene>
-        <!--View Controller-->
+        <!--User Image Detail View Controller-->
         <scene sceneID="f04-dK-wwM">
             <objects>
-                <viewController id="LUh-T8-oF8" sceneMemberID="viewController">
+                <viewController id="LUh-T8-oF8" customClass="UserImageDetailViewController" customModule="PragmaticTweets" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fj3-7J-giY"/>
                         <viewControllerLayoutGuide type="bottom" id="oMM-Rl-YhE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vjb-ru-ELM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mg2-j9-QMq">
@@ -410,10 +411,10 @@
                                 <exclude reference="Oa9-5O-WSh"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="GSK-Cn-Jnc"/>
-                                <exclude reference="X8I-RT-Ii5"/>
                                 <exclude reference="VI6-tO-5t0"/>
                                 <exclude reference="sYG-F4-Lfg"/>
+                                <exclude reference="GSK-Cn-Jnc"/>
+                                <exclude reference="X8I-RT-Ii5"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -422,18 +423,21 @@
                                 <include reference="Oa9-5O-WSh"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="GSK-Cn-Jnc"/>
-                                <include reference="X8I-RT-Ii5"/>
                                 <include reference="VI6-tO-5t0"/>
                                 <include reference="sYG-F4-Lfg"/>
+                                <include reference="GSK-Cn-Jnc"/>
+                                <include reference="X8I-RT-Ii5"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="userImageView" destination="mg2-j9-QMq" id="g3E-tW-YhY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pl5-lP-U7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="GSJ-vg-mWH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2895" y="-118"/>
+            <point key="canvasLocation" x="3088" y="-113"/>
         </scene>
     </scenes>
 </document>

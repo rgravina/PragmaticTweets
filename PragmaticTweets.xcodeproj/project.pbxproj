@@ -15,6 +15,7 @@
 		974DF9BA19E17316008D959E /* TweetDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974DF9B919E17316008D959E /* TweetDetailViewController.swift */; };
 		976DD27719E93D6200540C55 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976DD27619E93D6200540C55 /* UserDetailViewController.swift */; };
 		97AE781919FE8AF900109CFA /* SizeClassOverridingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AE781819FE8AF900109CFA /* SizeClassOverridingViewController.swift */; };
+		ECAECBCC1A00F16A002AAA7D /* UserImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAECBCB1A00F16A002AAA7D /* UserImageDetailViewController.swift */; };
 		ECC1E84319D5181C00D7FE17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1E84219D5181C00D7FE17 /* AppDelegate.swift */; };
 		ECC1E84519D5181C00D7FE17 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1E84419D5181C00D7FE17 /* RootViewController.swift */; };
 		ECC1E84819D5181C00D7FE17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC1E84619D5181C00D7FE17 /* Main.storyboard */; };
@@ -45,6 +46,7 @@
 		974DF9B919E17316008D959E /* TweetDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetDetailViewController.swift; sourceTree = "<group>"; };
 		976DD27619E93D6200540C55 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		97AE781819FE8AF900109CFA /* SizeClassOverridingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeClassOverridingViewController.swift; sourceTree = "<group>"; };
+		ECAECBCB1A00F16A002AAA7D /* UserImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserImageDetailViewController.swift; sourceTree = "<group>"; };
 		ECC1E83D19D5181C00D7FE17 /* PragmaticTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PragmaticTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC1E84119D5181C00D7FE17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC1E84219D5181C00D7FE17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,14 @@
 			name = "Size Class Override";
 			sourceTree = "<group>";
 		};
+		ECAECBCA1A00F145002AAA7D /* User Image Detail VC */ = {
+			isa = PBXGroup;
+			children = (
+				ECAECBCB1A00F16A002AAA7D /* UserImageDetailViewController.swift */,
+			);
+			name = "User Image Detail VC";
+			sourceTree = "<group>";
+		};
 		ECC1E83419D5181C00D7FE17 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +151,7 @@
 		ECC1E83F19D5181C00D7FE17 /* PragmaticTweets */ = {
 			isa = PBXGroup;
 			children = (
+				ECAECBCA1A00F145002AAA7D /* User Image Detail VC */,
 				97AE781719FE8ACA00109CFA /* Size Class Override */,
 				976DD27519E93CE900540C55 /* User Detail VC */,
 				974DF9B819E172DF008D959E /* Tweet Detail VC */,
@@ -289,6 +300,7 @@
 				972EE13B19DC3F1C002E5370 /* ParsedTweet.swift in Sources */,
 				ECC1E84519D5181C00D7FE17 /* RootViewController.swift in Sources */,
 				97AE781919FE8AF900109CFA /* SizeClassOverridingViewController.swift in Sources */,
+				ECAECBCC1A00F16A002AAA7D /* UserImageDetailViewController.swift in Sources */,
 				974DF9B519E0EBC9008D959E /* TwitterAPIRequest.swift in Sources */,
 				974DF9BA19E17316008D959E /* TweetDetailViewController.swift in Sources */,
 				ECC1E84319D5181C00D7FE17 /* AppDelegate.swift in Sources */,
