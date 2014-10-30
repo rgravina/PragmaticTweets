@@ -2,7 +2,7 @@ import UIKit
 
 class UserImageDetailViewController: UIViewController {
   @IBOutlet weak var userImageView: UIImageView!
-  
+
   var userImageURL: NSURL?
   var preGestureTransform: CGAffineTransform?
 
@@ -22,5 +22,9 @@ class UserImageDetailViewController: UIViewController {
       let translatedTransform = CGAffineTransformTranslate(self.preGestureTransform!, translation.x, translation.y)
       self.userImageView.transform = translatedTransform
     }
+  }
+
+  @IBAction func handleDoubleTapGesture(sender: UITapGestureRecognizer) {
+    self.userImageView.transform = CGAffineTransformIdentity
   }
 }
