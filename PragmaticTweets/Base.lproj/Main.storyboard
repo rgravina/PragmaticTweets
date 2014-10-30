@@ -369,8 +369,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mg2-j9-QMq">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mg2-j9-QMq">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="elE-Wi-DAX"/>
                                     <constraint firstAttribute="height" constant="280" id="iCN-n1-Vo2"/>
@@ -387,6 +388,9 @@
                                         <include reference="iCN-n1-Vo2"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gYU-nY-QQ8" appends="YES" id="Ivv-yx-Vh3"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa9-5O-WSh">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -436,6 +440,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pl5-lP-U7f" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="GSJ-vg-mWH" userLabel="Exit" sceneMemberID="exit"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="gYU-nY-QQ8">
+                    <connections>
+                        <action selector="handlePanGesture:" destination="LUh-T8-oF8" id="TfR-sp-yEe"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3088" y="-113"/>
         </scene>
