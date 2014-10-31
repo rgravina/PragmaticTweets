@@ -27,4 +27,14 @@ class UserImageDetailViewController: UIViewController {
   @IBAction func handleDoubleTapGesture(sender: UITapGestureRecognizer) {
     self.userImageView.transform = CGAffineTransformIdentity
   }
+
+  @IBAction func handlePinchGesture(sender: UIPinchGestureRecognizer) {
+    if sender.state == .Began {
+      self.preGestureTransform = self.userImageView.transform
+    }
+    if sender.state == .Began || sender.state == .Changed {
+      let scaledTransform = CGAffineTransformScale(self.preGestureTransform!, sender.scale, sender.scale)
+      self.userImageView.transform = scaledTransform
+    }
+  }
 }
