@@ -236,6 +236,7 @@
 		ECC1E83519D5181C00D7FE17 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Robert Gravina";
 				TargetAttributes = {
